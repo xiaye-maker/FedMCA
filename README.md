@@ -1,17 +1,9 @@
 # Personalized Federated Learning with Multiple Classifier Aggregation
 
-[//]: # ([![DOI]&#40;https://zenodo.org/badge/292225878.svg&#41;]&#40;https://zenodo.org/badge/latestdoi/292225878&#41;)
-
 ## Models
-- for CIFAR10 and CIFAR100 
-    2. FedAvgCNN()
-    3. ResNet18, AlexNet, MobileNet, GoogleNet, etc.
-
-- for Flowers102 and Tiny-ImageNet
-  
-  1. DNN(3\*64\*64)
-  2. FedAvgCNN()
-  3. AlexNet, ResNet18, MobileNet, GoogleNet, etc.
+- for PathMNIST, CIFAR10 and CIFAR100 
+    1. FedAvgCNN()
+    2. ResNet18, MobileNet.
 
 ## Environments
 
@@ -50,5 +42,5 @@ conda env create -f env_cuda_latest.yaml
 ## Train and evaluate the model:
 ```bash
 cd ./system
-python main.py -data CIFAR10 -dim 3*32*32 -indim 1600 -hete Hete1 -algo FedRG -gr 200 -id 0
+python -u main.py -nc 20 -nb 10 -data cifar10 -m cnn -algo FedMCA -gr 1000 -K 1 -mu 0.05 -lam 1 -did 4 -go cnn
 ```
