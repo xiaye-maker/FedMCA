@@ -1,9 +1,13 @@
 # Personalized Federated Learning with Multiple Classifier Aggregation
+ 
+## Datasets
 
 ## Models
 - for PathMNIST, CIFAR10 and CIFAR100 
     1. FedAvgCNN()
     2. ResNet18, MobileNet.
+-for OfficeHome
+    1. FedAvgCNN.
 
 ## Environments
 
